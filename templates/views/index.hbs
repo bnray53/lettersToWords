@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>About</title>
         
+        <meta name="author" content="Benjamin Ray" />
+        <meta name="date" content="Summer 2019" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Required Jquery for Bootstrap Plugins-->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
         
+        <style>
+        #backGround{
+            background-color: rgb(151, 151, 151);
+        }
+        
+        #mainBody {
+            padding: 0;
+            padding-bottom: 25px;
+            padding-top: 5px;
+            margin-top: 0px;
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: rgba(255, 255, 255, 0.829);
+
+            -moz-box-shadow: inset rgba(0,0,0,0.3) -5px -5px 10px, rgba(0,0,0,0.6) -10px 10px 15px;
+	        -webkit-box-shadow: inset rgba(0,0,0,0.3) -5px -5px 10px, rgba(0,0,0,0.6) -10px 10px 15px;
+            box-shadow: inset rgba(0,0,0,0.3) -5px -5px 10px, rgba(0,0,0,0.6) -10px 10px 15px;
+        }
+
+        @media only screen and (max-width: 600px) {
+           #mainBody {
+            padding: 0;
+            padding-bottom: 25px;
+            padding-top: 5px;
+            margin-top: 0px;
+            margin-left: 30px;
+            margin-right: 30px;
+            background-color: rgba(255, 255, 255, 0.829);
+
+            -moz-box-shadow: inset rgba(0,0,0,0.3) -5px -5px 10px, rgba(0,0,0,0.6) -10px 10px 15px;
+	        -webkit-box-shadow: inset rgba(0,0,0,0.3) -5px -5px 10px, rgba(0,0,0,0.6) -10px 10px 15px;
+            box-shadow: inset rgba(0,0,0,0.3) -5px -5px 10px, rgba(0,0,0,0.6) -10px 10px 15px;
+            }
+        }
+
+        #header{
+            background-color: lightgray;
+            text-align: center;
+
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: -15px;
+
+            -moz-box-shadow: inset -7px 0 10px -7px rgba(0,0,0,0.4), rgba(0,0,0,0.6) -10px 10px 15px;
+	        -webkit-box-shadow: inset -7px 0 10px -7px rgba(0,0,0,0.4), rgba(0,0,0,0.6) -10px 10px 15px;
+            box-shadow: inset -7px 0 10px -7px rgba(0,0,0,0.4), rgba(0,0,0,0.6) -10px 10px 15px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #header{
+            background-color: lightgray;
+            text-align: center;
+
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: -15px;
+
+            -moz-box-shadow: inset -7px 0 10px -7px rgba(0,0,0,0.4), rgba(0,0,0,0.6) -10px 10px 15px;
+	        -webkit-box-shadow: inset -7px 0 10px -7px rgba(0,0,0,0.4), rgba(0,0,0,0.6) -10px 10px 15px;
+            box-shadow: inset -7px 0 10px -7px rgba(0,0,0,0.4), rgba(0,0,0,0.6) -10px 10px 15px;
+            } 
+        } 
+
+        #form{
+            padding-top:25px;
+            width: 50%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            #form{
+            padding-top:25px;
+            width: 100%;
+            }
+        }
+
+
+        #footer{
+            padding-top: 20px;
+            padding-bottom: 5px;
+        }
+
+        </style>
+
     </head>
     <body>
-      <p>Index Page</p>
+        <div id="backGround">
+                <div id="header">
+                    <h2>Letters-To-Words</h2>
+                    <h4>Permutations Calculator</h4>
+                </div>
+            <div id="mainBody">
+                <div class="container-fluid">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li role="presentation"><a href="/word?word=sight">Find Permutations</a></li>  
+                        <li role="presentation" class="active"><a href="/">About</a></li>
+                    </ul>
+                
+                    <div class="container text-center" id="form">
+                        
+                        <h3>About:</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sodales velit, at iaculis lectus. Quisque blandit libero in odio bibendum fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam convallis erat dictum feugiat accumsan. Integer finibus turpis quis eros molestie, non pretium nulla eleifend. Aliquam erat volutpat. In vestibulum mi eu ultricies pretium. Vestibulum aliquam at sem nec venenatis. Sed enim lectus, rhoncus ac leo sed, aliquet tempor libero. Quisque vitae congue est, at pulvinar ipsum. Cras pellentesque accumsan enim. Nullam non purus facilisis, accumsan lorem vel, aliquet tellus. Curabitur ac mollis massa. 
+                        </p>
+
+                        
+                    </div>
+                    
+                    <footer class="container-fluid text-center ft-1" id="footer">
+                        <a href="https://www.linkedin.com/in/bnray53">Developer</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
