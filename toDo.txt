@@ -1,0 +1,6 @@
+To Do List:
+
+#Move some html items into partials
+#Configure public app.js to make request to /word
+#Configure route for permutations.hbs
+#Set-up 404 pages and routing
