@@ -3,7 +3,7 @@ To Do List:
 DONE #Move header/footer html items into partials
 #Configure public app.js to make request to /word and take info from form
 #Configure route for permutations.hbs
-#Set-up 404 pages and routing
+DONE #Set-up 404 pages and routing
 #Remove duplicates result from api app.js
 #Set-up min/max parameters for routing and api app.js
 #Write instructions and about page paragraphs

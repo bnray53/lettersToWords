@@ -22,66 +22,70 @@
         <link rel="stylesheet" href="/css/styles.css">
 
     </head>
-    <body>
-        <div id="backGround">
-
-            {{>header}}
-
-            <div id="mainBody">
-                <div class="container-fluid">
-
-                    <ul class="nav nav-tabs nav-justified">
-                        <li role="presentation" class="active"><a href="/word?word=sight">Find Permutations</a></li>  
-                        <li role="presentation"><a href="/">About</a></li>
+    <body id="backGround">
+    
+        {{>header}}
+    
+        <div id="mainBody">
+            <div class="container-fluid">
+    
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" class="active"><a href="/word?word=sight">Find Permutations</a></li>
+                    <li role="presentation"><a href="/">About</a></li>
+                </ul>
+    
+                <div class="container text-center" id="centerBody">
+    
+                    <h3>Instructions:</h3>
+    
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sodales velit, at iaculis
+                        lectus. Quisque blandit libero in odio bibendum fringilla. Class aptent taciti sociosqu ad litora
+                        torquent per conubia nostra, per inceptos himenaeos. Nullam convallis erat dictum feugiat accumsan.
+                        Integer finibus turpis quis eros molestie, non pretium nulla eleifend. Aliquam erat volutpat. In
+                        vestibulum mi eu ultricies pretium. Vestibulum aliquam at sem nec venenatis. Sed enim lectus,
+                        rhoncus ac leo sed, aliquet tempor libero. Quisque vitae congue est, at pulvinar ipsum. Cras
+                        pellentesque accumsan enim. Nullam non purus facilisis, accumsan lorem vel, aliquet tellus.
+                        Curabitur ac mollis massa.
+                    </p>
+    
+                    <form id="test">
+                        <label for="letters">Letters</label>
+                        <input type="text" id="letters" name="letterGroup" placeholder="String">
+    
+                        <label for="minSize">Min Size</label>
+                        <select id="minSize" name="min_size">
+                            <option value=1 selected>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+    
+                        <label for="maxSize">Max Size</label>
+                        <select id="maxSize" name="max_size" default=6>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6 selected>6</option>
+                        </select>
+    
+                        <button type="submit" class="btn btn-default">Generate Permutations</button>
+                    </form>
+    
+    
+                    <h3>Results:</h3>
+    
+                    <ul class="list-unstyled">
+                        {{#each permutations}}
+                        <li>{{this}}</li>
+                        {{/each}}
                     </ul>
-                
-                    <div class="container text-center" id="centerBody">
-                        
-                        <h3>Instructions:</h3>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sodales velit, at iaculis lectus. Quisque blandit libero in odio bibendum fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam convallis erat dictum feugiat accumsan. Integer finibus turpis quis eros molestie, non pretium nulla eleifend. Aliquam erat volutpat. In vestibulum mi eu ultricies pretium. Vestibulum aliquam at sem nec venenatis. Sed enim lectus, rhoncus ac leo sed, aliquet tempor libero. Quisque vitae congue est, at pulvinar ipsum. Cras pellentesque accumsan enim. Nullam non purus facilisis, accumsan lorem vel, aliquet tellus. Curabitur ac mollis massa. 
-                        </p>
-
-                        <form id="test">
-                            <label for="letters">Letters</label>
-                            <input type="text" id="letters" name="letterGroup" placeholder="String">
-
-                            <label for="minSize">Min Size</label>
-                            <select id="minSize" name="min_size">
-                                <option value=1 selected>1</option>
-                                <option value=2>2</option>
-                                <option value=3>3</option>
-                                <option value=4>4</option>
-                                <option value=5>5</option>
-                            </select>
-
-                            <label for="maxSize">Max Size</label>
-                            <select id="maxSize" name="max_size" default=6>
-                                <option value=2>2</option>
-                                <option value=3>3</option>
-                                <option value=4>4</option>
-                                <option value=5>5</option>
-                                <option value=6 selected>6</option>
-                            </select>
-
-
-                            <button type="submit" class="btn btn-default">Generate Permutations</button>
-                        </form>
-                        
-
-                        <h3>Results:</h3>
-                        
-                        <ul class="list-unstyled">
-                            {{#each permutations}}
-                            <li>{{this}}</li>
-                            {{/each}}
-                        </ul>
-                    </div>
-                    
-                    {{>footer}}
-
                 </div>
+    
+                {{>footer}}
+    
             </div>
         </div>
     </body>
