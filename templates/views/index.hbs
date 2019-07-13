@@ -24,12 +24,12 @@
     </head>
     <body>
         <div id="backGround">
-                <div id="header">
-                    <h2>Letters-To-Words</h2>
-                    <h4>Permutations Calculator</h4>
-                </div>
+                
+            {{>header}}
+
             <div id="mainBody">
                 <div class="container-fluid">
+                    
                     <ul class="nav nav-tabs nav-justified">
                         <li role="presentation"><a href="/word?word=sight">Find Permutations</a></li>  
                         <li role="presentation" class="active"><a href="/">About</a></li>
@@ -54,9 +54,8 @@
                         
                     </div>
                     
-                    <footer class="container-fluid text-center ft-1" id="footer">
-                        <a href="https://www.linkedin.com/in/bnray53">Developer</a>
-                    </footer>
+                    {{>footer}}
+
                 </div>
             </div>
         </div>
