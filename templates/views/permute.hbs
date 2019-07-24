@@ -30,7 +30,7 @@
             <div class="container-fluid">
     
                 <ul class="nav nav-tabs nav-justified">
-                    <li role="presentation" class="active"><a href="/word?word=sight">Find Permutations</a></li>
+                    <li role="presentation" class="active"><a href="/permutations">Find Permutations</a></li>
                     <li role="presentation"><a href="/">About</a></li>
                 </ul>
     
@@ -55,8 +55,7 @@
     
                         <label for="minSize">Min Size</label>
                         <select id="minSize" name="min_size">
-                            <option value=1 selected>1</option>
-                            <option value=2>2</option>
+                            <option value=2 selected>2</option>
                             <option value=3>3</option>
                             <option value=4>4</option>
                             <option value=5>5</option>
@@ -77,15 +76,18 @@
     
                     <h3>Results:</h3>
     
-                    <ul class="list-unstyled">
+                    {{!-- <ul class="list-unstyled">
                         {{#each permutations}}
                         <li>{{this}}</li>
                         {{/each}}
-                    </ul>
+                    </ul> --}}
+                    <p id="results">
+
+                    </p>
                 </div>
     
                 {{>footer}}
-    
+                <script src="/js/app.js"></script>
             </div>
         </div>
     </body>

@@ -24,17 +24,17 @@ app.get('/', (req, res)=>{
     res.status(201).render('index');
 })
 
-app.get('/word', (req, res)=>{
+app.get('/permutations', (req, res)=>{
+    res.status(201).render('permute');
+})
+
+app.get('/permuteWord', (req, res)=>{
     const perm=permute.permute(req.query.word);
-    //console.log(num);
-    //res.status(201).send(num);
-    res.status(201).render('permute', {
-        permutations: perm
-    })
+    res.send(perm);
 })
 
 app.get('*', (req, res)=>{
-    res.render('404');
+    res.status(404).render('404');
 })
 
 app.listen(port, ()=>{
