@@ -112,3 +112,7 @@
     box-sizing: border-box;
     }
 }
+
+#footer a{
+    color: black;
+}
