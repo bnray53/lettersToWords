@@ -29,8 +29,20 @@ app.get('/permutations', (req, res)=>{
 })
 
 app.get('/permuteWord', (req, res)=>{
-    const perm=permute.permute(req.query.word, req.query.min, req.query.max);
-    res.send(perm);
+    if(!req.query.word || !req.query.min || !req.query.max){
+        return res.send({
+            error: 'Missing Query Parameters'
+        })
+    }
+    permute.permute(req.query.word, req.query.min, req.query.max, (error, perm)=>{
+        if(error){
+            return res.send({
+                error
+            })
+        }
+        res.send(perm);
+    });
+    
 })
 
 app.get('*', (req, res)=>{

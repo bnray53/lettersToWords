@@ -1,8 +1,16 @@
 const lookup=require('./lookup.js');
 
-const permute=(word, min, max)=>{
+const permute=(word, min, max, callback)=>{
     word=word.trim().toLowerCase();
     const length=word.length;
+
+    if((!Number.isInteger(parseInt(min)))||(!Number.isInteger(parseInt(max)))){
+        return callback('Max and min query values must be integers', undefined);
+    }else if(!(word.match(/^[A-Za-z]+$/))){
+        return callback('Word must only contains letters', undefined);       
+    }else if(length>max){
+        return callback('Word length cannot be longer than max', undefined);
+    }
 
     //Powerset code
     let array=word;
@@ -40,7 +48,7 @@ const permute=(word, min, max)=>{
 
     let permutedArray=stringPermutations(temp3); 
     let validatedPermutedArray=validateWords(permutedArray);
-    return validatedPermutedArray;
+    callback(undefined, validatedPermutedArray);
 }
 
 function stringPermutations(arr) {

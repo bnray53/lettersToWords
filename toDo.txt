@@ -9,6 +9,9 @@ DONE #Set-up min/max parameters for routing and api app.js
 #Write instructions and about page paragraphs
 #Create README.md file and fill out
 #Update variable names in permute.js
-#Error handling for permute.js
--make sure user word is less than 8 chars long
-#A way to report missing words
+DONE #Error handling for permute.js
+-DONE make sure user word is less than 8 chars long
+-DONE make sure min and max are ints
+-DONE make sure word,min,and max queries have been provided
+-DONE make sure word contains only letters
+#???A way to report missing words
