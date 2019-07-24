@@ -54,7 +54,7 @@ const permute=(word, min, max, callback)=>{
 function stringPermutations(arr) {
     let results;
     let finalArr=[];
-    arr.forEach(str => {
+    arr.forEach((str) => {
         let letters = str.split('');
         results = [[letters.shift()]];
 
