@@ -8,8 +8,8 @@ const permute=(word, min, max, callback)=>{
         return callback('Max and min query values must be integers', undefined);
     }else if(!(word.match(/^[A-Za-z]+$/))){
         return callback('Word must only contains letters', undefined);       
-    }else if(length>max){
-        return callback('Word length cannot be longer than max', undefined);
+    }else if(length>8){
+        return callback('Word length cannot be longer than 8 characters', undefined);
     }
 
     //Powerset code
@@ -24,29 +24,29 @@ const permute=(word, min, max, callback)=>{
     //End powerset code
 
     //Remove empty set
-    let temp=result.slice(1, result.length);
+    let powerSet=result.slice(1, result.length);
     
     //Remove Duplicate Elements
-    let temp2=[];
-    for(i=0;i<temp.length;i++){
-        if(!temp2.includes(temp[i].toString())){
-            let test=temp[i].toString();
-            let test2=test.replace(/,/g, '');
-            temp2.push(test2);
+    let powerSetWithoutDuplicates=[];
+    for(i=0;i<powerSet.length;i++){
+        if(!powerSetWithoutDuplicates.includes(powerSet[i].toString())){
+            let stringWithComma=powerSet[i].toString();
+            let stringNoComma=stringWithComma.replace(/,/g, '');
+            powerSetWithoutDuplicates.push(stringNoComma);
         }
     }
     
     //Limiting set size based on user supplied min and max parameters
-    let temp3=[];
-    temp2.forEach((item) => {
-       if(item.length<=max && item.length>=min){
-           temp3.push(item);
+    let powerSetCorrectSize=[];
+    powerSetWithoutDuplicates.forEach((element) => {
+       if(element.length<=max && element.length>=min){
+           powerSetCorrectSize.push(element);
        } 
     });
 
-    //At this point temp3 contains all the sets we need to run permutations on,
+    //At this point powerSetCorrectSize contains all the sets we need to run permutations on,
 
-    let permutedArray=stringPermutations(temp3); 
+    let permutedArray=stringPermutations(powerSetCorrectSize); 
     let validatedPermutedArray=validateWords(permutedArray);
     callback(undefined, validatedPermutedArray);
 }
