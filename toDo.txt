@@ -4,7 +4,11 @@ DONE #Move header/footer html items into partials
 DONE #Configure public app.js to make request to /word and take info from form
 DONE #Configure route for permutations
 DONE #Set-up 404 pages and routing
-#Remove duplicates result from api app.js
-#Set-up min/max parameters for routing and api app.js
+DONE #Remove duplicates result from api permute.js
+DONE #Set-up min/max parameters for routing and api app.js
 #Write instructions and about page paragraphs
 #Create README.md file and fill out
+#Update variable names in permute.js
+#Error handling for permute.js
+-make sure user word is less than 8 chars long
+#A way to report missing words

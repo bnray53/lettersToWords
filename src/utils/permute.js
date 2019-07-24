@@ -1,6 +1,7 @@
 const lookup=require('./lookup.js');
 
-const permute=(word)=>{
+const permute=(word, min, max)=>{
+    word=word.trim().toLowerCase();
     const length=word.length;
 
     //Powerset code
@@ -26,10 +27,18 @@ const permute=(word)=>{
             temp2.push(test2);
         }
     }
+    
+    //Limiting set size based on user supplied min and max parameters
+    let temp3=[];
+    temp2.forEach((item) => {
+       if(item.length<=max && item.length>=min){
+           temp3.push(item);
+       } 
+    });
 
-    //At this point temp2 contains all the sets we need to run permutations on,
-    //At this point could cut computation time by limiting to certain set sizes?
-    let permutedArray=stringPermutations(temp2); 
+    //At this point temp3 contains all the sets we need to run permutations on,
+
+    let permutedArray=stringPermutations(temp3); 
     let validatedPermutedArray=validateWords(permutedArray);
     return validatedPermutedArray;
 }
@@ -77,8 +86,16 @@ const validateWords=(arr)=>{
             validatedArray.push(element);
         }
     });
-    //Need to remove any duplicates here
-    return validatedArray;
+
+    //Remove any duplicates here
+    let validatedArrayWithoutDuplicates=[];
+    validatedArray.forEach((element) => {
+        if((validatedArrayWithoutDuplicates.indexOf(element))===-1){
+            validatedArrayWithoutDuplicates.push(element);
+        }
+    });
+
+    return validatedArrayWithoutDuplicates;
 }
 
 

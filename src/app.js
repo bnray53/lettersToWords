@@ -29,7 +29,7 @@ app.get('/permutations', (req, res)=>{
 })
 
 app.get('/permuteWord', (req, res)=>{
-    const perm=permute.permute(req.query.word);
+    const perm=permute.permute(req.query.word, req.query.min, req.query.max);
     res.send(perm);
 })
 
