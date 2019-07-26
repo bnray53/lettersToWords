@@ -30,25 +30,23 @@
             <div class="container-fluid">
     
                 <ul class="nav nav-tabs nav-justified">
-                    <li role="presentation" class="active"><a href="/permutations">Find Permutations</a></li>
-                    <li role="presentation"><a href="/">About</a></li>
+                    <li role="presentation" class="active"><a href="/">Find Permutations</a></li>
+                    <li role="presentation"><a href="/about">About</a></li>
                 </ul>
     
                 <div class="container text-center" id="centerBody">
-    
-                    <h3>Instructions:</h3>
-    
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sodales velit, at iaculis
-                        lectus. Quisque blandit libero in odio bibendum fringilla. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Nullam convallis erat dictum feugiat accumsan.
-                        Integer finibus turpis quis eros molestie, non pretium nulla eleifend. Aliquam erat volutpat. In
-                        vestibulum mi eu ultricies pretium. Vestibulum aliquam at sem nec venenatis. Sed enim lectus,
-                        rhoncus ac leo sed, aliquet tempor libero. Quisque vitae congue est, at pulvinar ipsum. Cras
-                        pellentesque accumsan enim. Nullam non purus facilisis, accumsan lorem vel, aliquet tellus.
-                        Curabitur ac mollis massa.
-                    </p>
-    
+                    <p>&nbsp;</p>
+                    <div class="text-left">
+                        <h4><strong>Instructions:</strong></h4>
+        
+                        <p>
+                            &emsp;Type in the letters that you want to find word permutations for in the Letters text box. You can put in a
+                            maximum of 8 letters during each calculation. Then select the minimum and maximum result word length using the
+                            dropdown menus below. These can be used to limit your results to certain word lengths. For example, with the input
+                            of “cba” and the min and max set to 3, the results will be “cab”. If you want the most results for your input, set
+                            the minimum to 2 and the maximum to the number of letters you used in the input.
+                        </p>
+                    </div>
                     <form id="test">
                         <label for="letters">Letters</label>
                         <input type="text" id="letters" name="letterGroup" placeholder="String" required>
@@ -83,6 +81,7 @@
                     <p id="results">
 
                     </p>
+                    <p>&nbsp;</p>
                 </div>
     
                 {{>footer}}

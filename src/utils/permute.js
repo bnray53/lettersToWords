@@ -51,6 +51,7 @@ const permute=(word, min, max, callback)=>{
     callback(undefined, validatedPermutedArray);
 }
 
+//Permutation logic credit to Linda Morales https://medium.com/@lindagmorales94/how-to-solve-a-string-permutation-problem-using-javascript-95ad5c388219
 function stringPermutations(arr) {
     let results;
     let finalArr=[];
@@ -58,27 +59,34 @@ function stringPermutations(arr) {
         let letters = str.split('');
         results = [[letters.shift()]];
 
+        //while(letter.length>0)
         while (letters.length) {
 
             const currLetter = letters.shift();
 
             let tmpResults = [];
-            results.forEach(result => {
+            results.forEach((result) => {
 
                 let rIdx = 0;
 
                 while (rIdx <= result.length) {
-
+                    //Essientaly pulling the double array element result into tmp
                     const tmp = [...result];
+
+                    //Add the current letter to tmp at posistion rIdx
                     tmp.splice(rIdx, 0, currLetter);
+
                     tmpResults.push(tmp);
+
                     rIdx++;
                 }
             })
             results = tmpResults;
         } 
+        //Turn into single array with no duplicates
         results=results.map(letterArray => letterArray.join('')).filter((el, idx, self) => (self.indexOf(el) === idx))
         
+        //Push these results into the finalArr so they will all be in one place
         results.forEach(element => {
             finalArr.push(element)
         });
@@ -102,7 +110,7 @@ const validateWords=(arr)=>{
             validatedArrayWithoutDuplicates.push(element);
         }
     });
-
+    
     return validatedArrayWithoutDuplicates;
 }
 

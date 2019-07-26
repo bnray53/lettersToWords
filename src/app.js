@@ -21,11 +21,11 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res)=>{
-    res.status(201).render('index');
+    res.status(201).render('permute');
 })
 
-app.get('/permutations', (req, res)=>{
-    res.status(201).render('permute');
+app.get('/about', (req, res)=>{
+    res.status(201).render('index');
 })
 
 app.get('/permuteWord', (req, res)=>{

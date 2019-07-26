@@ -30,47 +30,60 @@
             <div class="container-fluid">
     
                 <ul class="nav nav-tabs nav-justified">
-                    <li role="presentation"><a href="/permutations">Find Permutations</a></li>
-                    <li role="presentation" class="active"><a href="/">About</a></li>
+                    <li role="presentation"><a href="/">Find Permutations</a></li>
+                    <li role="presentation" class="active"><a href="/about">About</a></li>
                 </ul>
     
                 <div class="container text-center" id="centerBody">
-    
-                    <h3>About:</h3>
-    
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sodales velit, at iaculis
-                        lectus. Quisque blandit libero in odio bibendum fringilla. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Nullam convallis erat dictum feugiat accumsan.
-                        Integer finibus turpis quis eros molestie, non pretium nulla eleifend. Aliquam erat volutpat. In
-                        vestibulum mi eu ultricies pretium. Vestibulum aliquam at sem nec venenatis. Sed enim lectus,
-                        rhoncus ac leo sed, aliquet tempor libero. Quisque vitae congue est, at pulvinar ipsum. Cras
-                        pellentesque accumsan enim. Nullam non purus facilisis, accumsan lorem vel, aliquet tellus.
-                        Curabitur ac mollis massa.
-                    </p>
-    
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sodales velit, at iaculis
-                        lectus. Quisque blandit libero in odio bibendum fringilla. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Nullam convallis erat dictum feugiat accumsan.
-                        Integer finibus turpis quis eros molestie, non pretium nulla eleifend. Aliquam erat volutpat. In
-                        vestibulum mi eu ultricies pretium. Vestibulum aliquam at sem nec venenatis. Sed enim lectus,
-                        rhoncus ac leo sed, aliquet tempor libero. Quisque vitae congue est, at pulvinar ipsum. Cras
-                        pellentesque accumsan enim. Nullam non purus facilisis, accumsan lorem vel, aliquet tellus.
-                        Curabitur ac mollis massa.
-                    </p>
-    
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac sodales velit, at iaculis
-                        lectus. Quisque blandit libero in odio bibendum fringilla. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Nullam convallis erat dictum feugiat accumsan.
-                        Integer finibus turpis quis eros molestie, non pretium nulla eleifend. Aliquam erat volutpat. In
-                        vestibulum mi eu ultricies pretium. Vestibulum aliquam at sem nec venenatis. Sed enim lectus,
-                        rhoncus ac leo sed, aliquet tempor libero. Quisque vitae congue est, at pulvinar ipsum. Cras
-                        pellentesque accumsan enim. Nullam non purus facilisis, accumsan lorem vel, aliquet tellus.
-                        Curabitur ac mollis massa.
-                    </p>
-    
+                    <p>&nbsp;</p>
+                    <div class="text-left">
+                        <h4><strong>What is This:</strong></h4>
+                        
+                        <p>
+                            &emsp;This is a program built to find word permutations for a given input of letters based on a user selected length
+                            of
+                            resulting words. For example, the word permutations for the input “rea” with the output length set to 3 are “ear,
+                            era, are”.
+                        </p>
+                        
+                        <h4><strong>How it Works:</strong></h4>
+                        <p>
+                            &emsp;The program works by first finding the powerset for the given input. For example, the powerset for the input
+                            “rea”
+                            is &#123;{},{r}, {e}, {a}, {r,e}, {r,a}, {e,a}, {r,e,a}}. This powerset is then limited to the user selected output
+                            size.
+                            Continuing the example above, if the selected output size is 3 the powerset is reduced to &#123;{r,e,a}}. This
+                            reduced
+                            powerset is then passed to a permutation function.
+                        </p>
+                        
+                        <p>
+                            &emsp;The permutation function will find all permutations for each element of the reduced powerset passed to it. For
+                            example, if it is passed the reduced powerset from above &#123;{r,e,a}} the resulting permutations are [[rea],
+                            [rae],
+                            [era], [ear], [are], [aer]]. This permutation array is then passed to a lookup function.
+                        </p>
+                        
+                        <p>
+                            &emsp;The lookup function will check each element of the permutations array against a lookup table populated with
+                            real
+                            words. The words in the lookup table are a collection of words from the <i>Official Scrabble Players Dictionary</i>
+                            and
+                            Wiktionary’s word frequency list. <i>(Credit to GitHub user dolph for making these sources open to use)</i> The
+                            words that
+                            are matched with an entry in this lookup table are then returned as an array. Continuing the example above the array
+                            returned would be [[era], [ear], [are]].
+                        </p>
+                        
+                        <h4><strong>Behind the Scenes:</strong></h4>
+                        <p>
+                            &emsp;This program was built using a Javascript Node backend running Express.js for the server. It is exposing an
+                            API endpoint that
+                            is being consumed by a frontend built using Bootstrap3 for the responsive styling and Handlebars.js for the
+                            templating. The application was deployed and hosted on Heroku.
+                        </p>
+                    </div>
+                    <p>&nbsp;</p>
     
                 </div>
     
