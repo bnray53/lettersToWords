@@ -7,7 +7,7 @@ DONE #Set-up 404 pages and routing
 DONE #Remove duplicates result from api permute.js
 DONE #Set-up min/max parameters for routing and api app.js
 DONE #Write instructions and about page paragraphs
-#Create README.md file and fill out
+DONE #Create README.md file and fill out
 DONE #Update variable names in permute.js
 DONE #Error handling for permute.js
 -DONE make sure user word is less than 8 chars long
@@ -15,5 +15,7 @@ DONE #Error handling for permute.js
 -DONE make sure word,min,and max queries have been provided
 -DONE make sure word contains only letters
 #LONGTERM???A way to report missing words
-#Add favicon
+DONE #Add favicon
 #Upload to github and deploy to heroku
+#Add live url to README.md
+#???LONGTERM Setup test suite using mocha
