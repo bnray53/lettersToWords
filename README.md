@@ -19,4 +19,4 @@
 - Type in the letters that you want to find word permutations for in the Letters text box. You can put in a maximum of 8 letters during each calculation. Then select the minimum and maximum result word length using the dropdown menus below. These can be used to limit your results to certain word lengths. For example, with the input of “cba” and the min and max set to 3, the results will be “cab”. If you want the most results for your input, set the minimum to 2 and the maximum to the number of letters you used in the input.
 
 ### Live Demo
-[Letters-To-Words](https://bnray53.github.io/briansBrain "Letters-To-Words")
+[Letters-To-Words](https://ray-letters-to-words.herokuapp.com/ "Letters-To-Words")
