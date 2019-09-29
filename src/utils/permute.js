@@ -7,7 +7,7 @@ const permute=(word, min, max, callback)=>{
     if((!Number.isInteger(parseInt(min)))||(!Number.isInteger(parseInt(max)))){
         return callback('Max and min query values must be integers', undefined);
     }else if(!(word.match(/^[A-Za-z]+$/))){
-        return callback('Word must only contains letters', undefined);       
+        return callback('Word must only contain letters', undefined);       
     }else if(length>8){
         return callback('Word length cannot be longer than 8 characters', undefined);
     }
